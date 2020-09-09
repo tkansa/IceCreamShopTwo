@@ -1,0 +1,12 @@
+﻿
+@{
+     IEnumerable<Product> products = (List<Product>)ViewData["Products"];
+}
+
+<h1>@ViewData["Title"]</h1>
+<ul>
+    @foreach (Product p in products)
+    {
+        <li><a href="/Home/Detail/@p.Id">@p.Name</a></li>
+    }
+</ul>

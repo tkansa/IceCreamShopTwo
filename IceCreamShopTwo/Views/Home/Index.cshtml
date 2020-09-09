@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    IEnumerable<Product> products = (List<Product>)ViewData["Products"];
+}
+
+<div class="text-center">
+    <h1 class="display-4">Ice Cream Menu</h1>
+    <ul>
+        @foreach(Product p in products)
+        {
+            <li><a href="/Home/Cat?id=@p.Category">@p.Category</a></li>
+        }
+    </ul>
+</div>

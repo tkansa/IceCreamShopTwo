@@ -1,0 +1,22 @@
+﻿@model Product
+@{
+    ViewData["Title"] = "Add New Product";
+}
+
+<h1>AddForm</h1>
+<form asp-controller="Admin" asp-action="Add" method="post">
+    @Html.LabelFor(m => m.Name)
+    @Html.EditorFor(m => m.Name)
+    <br />
+    @Html.LabelFor(m => m.Category)
+    @Html.EditorFor(m => m.Category)
+    <br />
+    @Html.LabelFor(m => m.Description)
+    @Html.EditorFor(m => m.Description)
+    <br />
+    @Html.LabelFor(m => m.Price)
+    @Html.EditorFor(m => m.Price)
+    <br />
+    <input type="submit" value="Add Item"/>
+
+</form>

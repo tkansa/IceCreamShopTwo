@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewData["Title"] = "Admin Index";
+    IEnumerable<Product> products = (List<Product>)ViewData["Products"];
+}
+
+@if (@TempData["UserMsg"] != null)
+{
+    @TempData["UserMsg"]
+}
+
+
+<h1>Index</h1>
+<div><a href="/Admin/Add">Add</a></div>
+<ul>
+    @foreach (Product p in products)
+    {
+        <li>
+            <div>
+                @p.Name @p.Price.ToString("C") @p.Category
+                <a href="/Admin/Edit/@p.Id">Edit</a>
+                <a href="/Admin/Delete/@p.Id">Delete</a>
+            </div>
+        </li>
+    }
+</ul>

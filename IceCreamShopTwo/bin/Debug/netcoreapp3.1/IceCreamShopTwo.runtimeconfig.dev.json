@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\Tiia\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Tiia\\.nuget\\packages"
+    ]
+  }
+}
